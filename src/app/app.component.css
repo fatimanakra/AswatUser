@@ -1,0 +1,127 @@
+
+
+
+mat-toolbar {
+    display: flex; /* Utilisez flex pour la mise en page */
+    align-items: center; /* Aligner les éléments au centre verticalement */
+    height: 50px; /* Hauteur du toolbar */
+    position: fixed; /* Fixe la barre d'outils en haut de la page */
+    top: 0; /* Aligne la barre d'outils en haut de la page */
+    width: 100%; /* Prend toute la largeur de la page */
+    z-index: 1000;
+    background-color: #fbf4fb;
+
+  }
+
+  .nav-links {
+    flex-grow: 1; /* Pour occuper tout l'espace disponible */
+    display: flex;
+    justify-content: center; /* Pour centrer les éléments horizontalement */
+    align-items: center; /* Pour centrer les éléments verticalement */
+    gap: 30px;
+    margin-left: auto; /* Déplace les éléments vers la droite */
+    padding-right: -100px; /* Ajoute un espacement de 20 pixels entre les éléments */
+}
+
+  
+  .nav-links a {
+    margin-right: 10px;
+    font-family: cursive; 
+    font-size:25px;
+    color: rgb(147, 90, 133);
+
+  }
+  .nav-links a:hover {
+    text-decoration: underline; /* Ajouter une soulignure survolée */
+    color: #796f66ef; /* Changer la couleur des liens en gris clair lors du survol */
+  }
+
+  h4 {
+    font-size: 18px; /* Taille de la police */
+    margin-top: 10px; /* Marge en haut */
+  }
+  
+  .menu-button {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Marge en haut */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition au survol */
+  }
+  .menu-button:hover {
+    background-color: #f0f0f0; /* Couleur de fond au survol */
+  }
+  
+  /* Style pour les icônes */
+  mat-icon {
+    margin-right: 10px;
+     /* Marge à droite */
+  }
+
+
+  
+
+ 
+
+
+.mat-sidenav-container {
+    height: 100vh;
+}
+
+.mat-sidenav {
+    width: 250px; /* ou la largeur de votre choix */
+    position: fixed;
+}
+
+
+/* Style for the sidenav */
+.sidenav {
+  width: 200px;
+  padding: 20px;
+  background-color: #fcfbfc;
+}
+
+/* Add padding-top to menu-list to avoid overlap with navbar */
+.menu-list {
+  list-style-type: none;
+  padding: 20px 0 0 0; /* Top padding to push the list down */
+  margin: 0;
+}
+
+/* Style for each menu item */
+.menu-item {
+  margin: 25px 0;
+  position: relative;
+  padding-left: 20px; /* Space for the bullet point */
+}
+
+.menu-item::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007bff;
+  font-size: 1.5em;
+}
+
+/* Style for the links in the menu */
+.menu-item a {
+  text-decoration: none;
+  color: rgb(152, 81, 134);
+
+  font-size: 1em;
+  display: block;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+/* Style for the active link */
+.menu-item a.active-link {
+  color: rgb(116, 62, 102);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+
+
+/* Style pour le texte de la carte */
+

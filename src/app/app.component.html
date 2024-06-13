@@ -1,0 +1,55 @@
+<mat-toolbar>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <mat-icon  (click)="this.sideNav.open()"  *ngIf="!sideNav.opened"  class="mat-18">menu</mat-icon>
+<mat-icon  (click)="this.sideNav.close()"*ngIf=" sideNav.opened" class="mat-18">close</mat-icon>
+<img src="assets/img/logo2.png" width="250" height="auto" style="margin-top: -16px; margin-right: -2px;">
+ 
+<div class="nav-links">
+
+
+  <a nz-button nzType="link" routerLink="/maroc" routerLinkActive="active">المغرب </a>
+
+  <a nz-button nzType="link" routerLink="/afrique" routerLinkActive="Active"  > افريقيا</a>
+  <a nz-button nzType="link" routerLink="/europe" routerLinkActive="active"> أروبا
+  </a>
+  <a nz-button nzType="link" routerLink="/asie" routerLinkActive="Active"  > آسيا</a>
+  <a nz-button nzType="link" routerLink="/amerique" routerLinkActive="Active"  > أمريكا</a>
+
+
+
+
+</div>
+</mat-toolbar>
+<mat-sidenav-container>
+
+
+    <mat-sidenav #sideNav="matSidenav" class="sidenav">
+        <mat-divider></mat-divider>
+        
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a nz-button nzType="link" routerLink="/first" routerLinkActive="active-link">اليوم</a>
+          </li>
+          <li class="menu-item">
+            <a nz-button nzType="link" routerLink="/trend" routerLinkActive="active-link">ترند</a>
+          </li>
+          <li class="menu-item">
+            <a nz-button nzType="link" routerLink="/reports" routerLinkActive="active-link">تقارير</a>
+          </li>
+          <li class="menu-item">
+            <a nz-button nzType="link" routerLink="/latest" routerLinkActive="active-link">آخر الأخبار</a>
+          </li>
+
+         
+        </ul>
+
+        <a mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" nz-button nzType="link" routerLink="/favoris" routerLinkActive="active">
+          <mat-icon style="color:  rgb(173, 57, 132);">favorite</mat-icon>
+        </a>
+    </mat-sidenav>
+
+
+  <router-outlet></router-outlet>
+
+</mat-sidenav-container>

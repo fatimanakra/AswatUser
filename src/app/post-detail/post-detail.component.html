@@ -1,0 +1,26 @@
+<!-- post-detail.component.html -->
+<div class="body">
+  <div *ngIf="post" class="post-detail">
+    <h1>{{ post.name }}</h1>
+    <div class="post-body">
+      <div class="post-image">
+        <img [src]="post.processedImg" alt="post-image">
+      </div>
+      <div class="post-content">
+        <p style="font-size: 1em;">{{ post.content }}</p>
+        <p>{{ post.text }}</p>
+      </div>
+    </div>
+    <div class="post-footer">
+      <p>Posted by: {{ post.postedBy }} on {{ post.date | date }}</p>
+    </div>
+    <img 
+      src="assets/img/save-instagram.png" 
+      (click)="toggleFavorite(post)" 
+      width="50" 
+      height="auto" 
+      class="favorite-icon" 
+      [class.favorited]="isFavorite" 
+      style="cursor: pointer; margin-top: -16px; margin-right: -2px;">
+  </div>
+</div>

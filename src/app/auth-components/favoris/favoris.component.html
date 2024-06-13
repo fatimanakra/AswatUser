@@ -1,0 +1,13 @@
+<!-- favorites.component.html -->
+<div class="favorites">
+    <h2>الأكثر إعجابا</h2>
+    <div class="favorites-container">
+      <div *ngFor="let favorite of favoris" class="favorite-item">
+        <h3>{{ favorite.name }}</h3>
+        <img [src]="favorite.processedImg" alt="favorite-image">
+        <p>{{ favorite.content }}</p>
+        <p>{{ favorite.text }}</p>
+      </div>
+    </div>
+  </div>
+  

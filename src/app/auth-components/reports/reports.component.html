@@ -1,0 +1,38 @@
+<div class="main-content">
+  <div class="container">
+    <div class="search-container">
+      <div class="search-form">
+        <div class="input-group">
+          <span class="input-icon"><i class="fas fa-search fa-lg"></i></span>
+          <input type="text" [(ngModel)]="searchCriteria.name" placeholder="Search by Name">
+        </div>
+        <div class="input-group">
+          <span class="input-icon"><i class="fas fa-map-marker-alt fa-lg"></i></span>
+          <input type="text" [(ngModel)]="searchCriteria.category" placeholder="Search by Category">
+        </div>
+        <button (click)="searchPosts()">Search</button>
+      </div>
+    </div>
+    <div class="post-list">
+      <mat-card class="post-card" *ngFor="let archivedPost of archivedPosts">
+        <div class="post-details">
+          <a [routerLink]="['/post', archivedPost.id]">
+            <div class="post-image">
+              <span class="category-label">{{ archivedPost.categoryName }}</span>
+              <img [src]="archivedPost.processedImg" alt="post-image">
+            </div>
+          </a>
+          <div class="post-info">
+            <h2 class="post-name">{{archivedPost.name}}</h2>
+            <mat-divider></mat-divider>
+            <div class="post-meta">
+              <div class="info-row">
+                <span class="info-value">{{ archivedPost.date }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
